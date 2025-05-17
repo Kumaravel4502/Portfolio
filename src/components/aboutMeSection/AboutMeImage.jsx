@@ -21,7 +21,7 @@ const AboutMeImage = () => {
           className="w-full"
         >
           <div className="text-center mb-6">
-            <h3 className="text-5xl font-bold text-white mb-4">Web Dev</h3>
+            <h3 className="text-5xl font-bold text-white mb-4"><span className="text-secondary">Web Dev</span></h3>
             <div className="flex justify-center gap-3 mb-6">
               <span className="px-3 py-1 bg-orange/50 text-white rounded-full text-sm">React</span>
               <span className="px-3 py-1 bg-orange/50 text-white rounded-full text-sm">Frontend</span>

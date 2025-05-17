@@ -15,7 +15,7 @@ const NavbarToggler = () => {
     <motion.button
       whileTap={{ scale: 0.9 }}
       transition={{ duration: 0.2 }}
-      className="text-xl p-2 rounded-md bg-gradient-to-r from-primary to-secondary text-white shadow-highlight"
+      className="text-xl p-2 rounded-md bg-primary text-white shadow-highlight"
       onClick={setToggleMenu}
       aria-label="Toggle menu"
     >

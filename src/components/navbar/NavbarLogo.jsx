@@ -51,7 +51,7 @@ const NavbarLogo = () => {
               </linearGradient>
               <linearGradient id="gradient-stroke" x1="3" y1="3" x2="39" y2="34" gradientUnits="userSpaceOnUse">
                 <stop stopColor="#3b82f6" />
-                <stop offset="1" stopColor="#fb9718" />
+                {/* <stop offset="1" stopColor="#fb9718" /> */}
               </linearGradient>
             </defs>
           </svg>
@@ -104,7 +104,7 @@ const NavbarLogo = () => {
             </linearGradient>
             <linearGradient id="gradient-stroke-mobile" x1="3" y1="3" x2="39" y2="34" gradientUnits="userSpaceOnUse">
               <stop stopColor="#3b82f6" />
-              <stop offset="1" stopColor="#fb9718" />
+              {/* <stop offset="1" stopColor="#fb9718" /> */}
             </linearGradient>
           </defs>
         </svg>

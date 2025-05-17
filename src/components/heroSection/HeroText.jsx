@@ -58,8 +58,9 @@ const HeroText = () => {
         </Motion.a>
         <Motion.a
           href="#contact"
-          className="btn-secondary text-sm sm:text-base w-full sm:w-auto text-center"
+          className=" btn-secondary text-sm sm:text-base w-full sm:w-auto text-center"
           {...hoverScale}
+      
         >
           Contact Me
         </Motion.a>

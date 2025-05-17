@@ -9,7 +9,7 @@ const SkillsText = () => {
       transition={{ duration: 0.6 }}
     >
       <motion.h2
-        className="text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-10"
+        className="text-5xl font-bold text-white bg-clip-text text-transparent mb-10"
         whileHover={{ scale: 1.05 }}
         transition={{ type: "spring", stiffness: 300 }}
       >

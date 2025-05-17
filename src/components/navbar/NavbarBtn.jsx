@@ -7,7 +7,7 @@ const NavbarBtn = () => {
     <motion.button
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="px-6 py-2 rounded-lg text-lg font-medium text-white bg-gradient-to-r from-primary to-secondary shadow-highlight flex items-center gap-2 transition-all duration-300"
+      className="px-6 py-2 rounded-lg text-lg font-medium text-white bg-primary shadow-highlight flex items-center gap-2 transition-all duration-300"
     >
       <Link spy={true} smooth={true} duration={500} offset={-120} to="contact">
         Hire Me

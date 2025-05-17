@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  background: linear-gradient(to right, #0f172a, #1e293b);
+  background: #0f172a;
   min-height: 100vh;
   margin: 0;
   padding: 0;
@@ -27,35 +27,25 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #fb9718;
+  background: #64748b;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #d28422;
+  background: #334155;
 }
 
-/* Direct CSS for gradient text as fallback */
-.text-gradient {
-  background: linear-gradient(to right, #3b82f6, #fb9718);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+/* Professional text colors classes */
+.text-primary {
+  color: #2563eb;
 }
 
-/* Gradient text colors for name */
-.text-gradient-blue {
-  background: linear-gradient(to right, #3b82f6, #60a5fa);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+.text-secondary {
+  color: #f59e0b;
 }
 
-.text-gradient-orange {
-  background: linear-gradient(to right, #fb9718, #ffc107);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+.text-accent {
+  color: #3b82f6;
 }
 
 /* 3D Transform Utility */
@@ -95,13 +85,13 @@ body {
 /* Animation for pulsing border */
 @keyframes borderPulse {
   0% {
-    border-color: rgba(59, 130, 246, 0.2);
+    border-color: rgba(37, 99, 235, 0.2);
   }
   50% {
-    border-color: rgba(251, 151, 24, 0.4);
+    border-color: rgba(100, 116, 139, 0.4);
   }
   100% {
-    border-color: rgba(59, 130, 246, 0.2);
+    border-color: rgba(37, 99, 235, 0.2);
   }
 }
 
@@ -135,8 +125,8 @@ body {
     @apply w-full max-w-[1200px] mx-auto px-4 sm:px-6 md:px-8;
   }
 
-  .gradient-text {
-    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  .text-highlight {
+    @apply text-primary font-semibold;
   }
 
   .btn-primary {
@@ -145,39 +135,39 @@ body {
 
   .btn-secondary {
     background-color: transparent;
-    color: #fb9718; /* secondary color */
+    color: #64748b; /* gray color */
     font-weight: 500;
     padding: 0.5rem 1.5rem;
     border-radius: 9999px;
-    border: 2px solid #fb9718; /* secondary color */
+    border: 2px solid #64748b; /* gray color */
     transition-property: all;
     transition-duration: 300ms;
   }
 
   .btn-secondary:hover {
     background-color: rgba(
-      251,
-      151,
-      24,
+      100,
+      116,
+      139,
       0.1
-    ); /* secondary color with 10% opacity */
+    ); /* gray color with 10% opacity */
   }
 
   /* Responsive text classes */
   .heading-1 {
-    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold;
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white;
   }
 
   .heading-2 {
-    @apply text-2xl sm:text-3xl md:text-4xl font-bold;
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold text-white;
   }
 
   .heading-3 {
-    @apply text-xl sm:text-2xl md:text-3xl font-semibold;
+    @apply text-xl sm:text-2xl md:text-3xl font-semibold text-lightGray;
   }
 
   .body-text {
-    @apply text-sm sm:text-base md:text-lg;
+    @apply text-sm sm:text-base md:text-lg text-lightGray;
   }
 
   /* Responsive layout helpers */
