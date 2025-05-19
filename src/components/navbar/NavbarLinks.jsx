@@ -50,12 +50,12 @@ const NavbarLinks = () => {
             offset={-100}
             to={link.section}
             onClick={handleLinkClick}
-            className="cursor-pointer text-lightGray hover:text-primary transition-all duration-300 relative py-2 px-1 block lg:text-base sm:text-lg"
+            className="cursor-pointer text-lightGray  hover:text-primary transition-all duration-300 relative py-2 px-1 block lg:text-base sm:text-lg"
             activeClass="text-secondary"
           >
             <span className="relative z-10">{link.link}</span>
             <motion.span
-              className="absolute bottom-0 left-0 w-full h-[2px] bg-secondary"
+              className="absolute bottom-0 left-0 w-full h-[2px]  bg-secondary"
               initial={{ scaleX: 0, originX: 0 }}
               whileHover={{ scaleX: 1 }}
               transition={{ duration: 0.3 }}
