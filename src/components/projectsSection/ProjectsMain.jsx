@@ -43,7 +43,7 @@ const projects = [
   },
   {
     name: "Edugen",
-    description: "Tourism website showcasing India's cultural heritage with interactive gallery.",
+    description: "EguDen is a modern online learning platform that delivers accessible, engaging, and practical education, aiming to bridge the gap between traditional and digital learning with easy-to-follow, up-to-date content.",
     tech: ["React", "Tailwind CSS"],
     year: "2025",
     align: "right",
