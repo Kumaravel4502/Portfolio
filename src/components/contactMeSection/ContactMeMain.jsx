@@ -22,11 +22,20 @@ const ContactMeMain = () => {
         </Motion.h2>
 
         <Motion.div
-          variants={fadeIn("up", 0.4)}
-          className="flex flex-col md:flex-row justify-between gap-8 md:gap-12 lg:gap-16 bg-darkBlue/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-primary/10 shadow-lg"
+          className="flex flex-col md:flex-row justify-between gap-8 md:gap-12 lg:gap-16 bg-darkBlue/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-primary/10"
         >
-          <ContactMeLeft />
-          <ContactMeRight />
+          <Motion.div
+            className="flex flex-col gap-6 sm:gap-8 flex-1"
+            variants={fadeIn("right", 0.4)}
+          >
+            <ContactMeLeft />
+          </Motion.div>
+          <Motion.div
+            className="flex flex-col items-center justify-center gap-6 sm:gap-8 w-full md:w-auto"
+            variants={fadeIn("left", 0.4)}
+          >
+            <ContactMeRight />
+          </Motion.div>
         </Motion.div>
       </div>
 

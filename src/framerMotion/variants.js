@@ -1,8 +1,8 @@
 export const fadeIn = (direction, delay) => {
   return {
     hidden: {
-      y: direction === "up" ? 40 : direction === "down" ? -40 : 0,
-      x: direction === "left" ? 40 : direction === "right" ? -40 : 0,
+      y: direction === "up" ? 80 : direction === "down" ? -80 : 0,
+      x: direction === "left" ? 80 : direction === "right" ? -80 : 0,
       opacity: 0,
     },
     show: {
@@ -10,10 +10,11 @@ export const fadeIn = (direction, delay) => {
       x: 0,
       opacity: 1,
       transition: {
-        type: "tween",
-        duration: 1.2,
+        type: "spring",
+        duration: 0.8,
         delay: delay,
-        ease: [0.25, 0.25, 0.25, 0.75],
+        damping: 15,
+        stiffness: 100,
       },
     },
   };
@@ -34,7 +35,7 @@ export const staggerContainer = (staggerChildren, delayChildren) => {
 export const scaleIn = (delay) => {
   return {
     hidden: {
-      scale: 0.8,
+      scale: 0,
       opacity: 0,
     },
     show: {
@@ -42,15 +43,15 @@ export const scaleIn = (delay) => {
       opacity: 1,
       transition: {
         type: "spring",
-        duration: 1.5,
+        duration: 0.8,
         delay,
-        bounce: 0.3,
+        bounce: 0.4,
       },
     },
   };
 };
 
-export const slideIn = (direction, delay, duration = 0.8) => {
+export const slideIn = (direction, delay, duration = 0.5) => {
   return {
     hidden: {
       x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,
@@ -63,8 +64,8 @@ export const slideIn = (direction, delay, duration = 0.8) => {
       opacity: 1,
       transition: {
         type: "spring",
-        damping: 20,
-        stiffness: 100,
+        damping: 15,
+        stiffness: 80,
         delay,
         duration,
       },
@@ -75,7 +76,7 @@ export const slideIn = (direction, delay, duration = 0.8) => {
 export const textReveal = (delay) => {
   return {
     hidden: {
-      y: 20,
+      y: 50,
       opacity: 0,
     },
     show: {
@@ -83,8 +84,9 @@ export const textReveal = (delay) => {
       opacity: 1,
       transition: {
         type: "spring",
-        damping: 12,
+        damping: 15,
         delay,
+        stiffness: 100,
       },
     },
   };

@@ -5,6 +5,7 @@ import NavbarToggler from "./NavbarToggler";
 import { useSelector } from "react-redux";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useEffect } from "react";
+import { fadeIn } from "../../framerMotion/variants";
 
 const NavbarMain = () => {
   const menuOpen = useSelector((state) => state.menu.menuOpen);
@@ -44,9 +45,9 @@ const NavbarMain = () => {
       }}
     >
       <motion.div
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        variants={fadeIn("down", 0.2)}
+        initial="hidden"
+        animate="show"
         className="flex justify-between w-full max-w-[1200px] mx-auto items-center p-4 rounded-lg shadow-lg backdrop-blur-md"
         style={{
           backgroundColor: navBackground,
@@ -63,9 +64,9 @@ const NavbarMain = () => {
         <div className="flex items-center gap-4">
           <NavbarBtn />
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+            variants={fadeIn("down", 0.4)}
+            initial="hidden"
+            animate="show"
             className="flex lg:hidden sm:block"
           >
             <NavbarToggler />
@@ -76,10 +77,10 @@ const NavbarMain = () => {
       {menuOpen && (
         <motion.div
           className="lg:hidden fixed top-[4rem] left-0 w-full px-4"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.3 }}
+          variants={fadeIn("down", 0)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
         >
           <div className="bg-dark/90 backdrop-blur-lg w-full py-6 px-4 rounded-lg mt-2 shadow-lg border-l-2 border-secondary">
             <NavbarLinks />

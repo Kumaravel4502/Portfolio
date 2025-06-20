@@ -43,8 +43,7 @@ const ContactForm = () => {
   };
 
   return (
-    <Motion.div
-      variants={fadeIn("up", 0.4)}
+    <div
       className="w-full"
     >
       {success && (
@@ -91,7 +90,7 @@ const ContactForm = () => {
           Send Message
         </Motion.button>
       </form>
-    </Motion.div>
+    </div>
   );
 };
 

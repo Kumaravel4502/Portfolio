@@ -1,6 +1,7 @@
 import { BsArrowUpRight } from "react-icons/bs";
 import { motion as Motion } from "framer-motion";
 import { fadeIn, hoverScale, slideIn } from "../../framerMotion/variants";
+import Image from "../Image";
 
 const SingleProject = ({ name, description, tech, year, align, image, link }) => {
   return (
@@ -73,9 +74,7 @@ const SingleProject = ({ name, description, tech, year, align, image, link }) =>
           transition={{ duration: 0.4 }}
           className="overflow-hidden rounded-lg shadow-lg"
         >
-          <Motion.img
-            src={image}
-            alt={name}
+          <Motion.div
             className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 aspect-video sm:aspect-auto"
             initial={{ filter: "grayscale(20%) brightness(0.9)" }}
             whileInView={{ filter: "grayscale(0%) brightness(1)" }}
@@ -84,7 +83,9 @@ const SingleProject = ({ name, description, tech, year, align, image, link }) =>
               duration: 0.7,
               filter: { duration: 0.4 }
             }}
-          />
+          >
+            <Image src={image} alt={name} />
+          </Motion.div>
         </Motion.div>
       </Motion.div>
     </Motion.div>

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FaGitAlt, FaGithub, FaFigma, FaNpm } from "react-icons/fa";
 import { SiVercel, SiNetlify, SiFirebase, } from "react-icons/si";
+import { fadeIn, staggerContainer } from "../../framerMotion/variants";
 
 const tools = [
   { name: "Git", icon: FaGitAlt, color: "#F05032" },
@@ -17,36 +18,26 @@ const SubSkills = () => {
   return (
     <div className="py-16 relative overflow-hidden bg-gradient-to-b from-dark/30 to-darkBlue/30 backdrop-blur-sm">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        variants={staggerContainer(0.1, 0.2)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.2 }}
         className="max-w-[1200px] mx-auto px-4"
       >
-        <h3 className="text-3xl font-medium text-center mb-12 text-lightGray">
+        <motion.h3
+          variants={fadeIn("down", 0.2)}
+          className="text-3xl font-medium text-center mb-12 text-lightGray"
+        >
           Tools & <span className="text-secondary">Technologies</span>
-        </h3>
+        </motion.h3>
 
-        <motion.div
+        <div
           className="flex flex-wrap justify-center items-center gap-8 max-w-[1000px] mx-auto"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={{
-            hidden: {},
-            visible: {
-              transition: {
-                staggerChildren: 0.1
-              }
-            }
-          }}
         >
           {tools.map((tool, index) => (
             <motion.div
               key={index}
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 }
-              }}
+              variants={fadeIn("up", 0)}
               className="flex flex-col items-center mx-2 my-3"
             >
               <motion.div
@@ -59,7 +50,7 @@ const SubSkills = () => {
               <p className="text-sm text-lightGray mt-2">{tool.name}</p>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </motion.div>
     </div>
   );

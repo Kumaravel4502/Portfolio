@@ -218,33 +218,39 @@ const HeroPic = () => {
 
               {/* Animated code lines */}
               <Motion.div
-                className="h-1.5 w-[50%] bg-blue-500/20 rounded-full"
-                animate={{ width: ['50%', '70%', '50%'] }}
+                className="h-1.5 w-full bg-blue-500/20 rounded-full"
+                style={{ transformOrigin: 'left' }}
+                animate={{ scaleX: [0.5, 0.7, 0.5] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               />
               <Motion.div
-                className="h-1.5 w-[70%] bg-blue-500/30 rounded-full"
-                animate={{ width: ['70%', '40%', '70%'] }}
+                className="h-1.5 w-full bg-blue-500/30 rounded-full"
+                style={{ transformOrigin: 'left' }}
+                animate={{ scaleX: [0.7, 0.4, 0.7] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
               />
               <Motion.div
-                className="h-1.5 w-[45%] bg-purple-500/20 rounded-full"
-                animate={{ width: ['45%', '60%', '45%'] }}
+                className="h-1.5 w-full bg-purple-500/20 rounded-full"
+                style={{ transformOrigin: 'left' }}
+                animate={{ scaleX: [0.45, 0.6, 0.45] }}
                 transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
               />
               <Motion.div
-                className="h-1.5 w-[55%] bg-orange-500/25 rounded-full"
-                animate={{ width: ['55%', '30%', '55%'] }}
+                className="h-1.5 w-full bg-orange-500/25 rounded-full"
+                style={{ transformOrigin: 'left' }}
+                animate={{ scaleX: [0.55, 0.3, 0.55] }}
                 transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
               />
               <Motion.div
-                className="h-1.5 w-[65%] bg-green-500/20 rounded-full"
-                animate={{ width: ['65%', '80%', '65%'] }}
+                className="h-1.5 w-full bg-green-500/20 rounded-full"
+                style={{ transformOrigin: 'left' }}
+                animate={{ scaleX: [0.65, 0.8, 0.65] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
               />
               <Motion.div
-                className="h-1.5 w-[40%] bg-primary/30 rounded-full"
-                animate={{ width: ['40%', '60%', '40%'] }}
+                className="h-1.5 w-full bg-primary/30 rounded-full"
+                style={{ transformOrigin: 'left' }}
+                animate={{ scaleX: [0.4, 0.6, 0.4] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 2.5 }}
               />
 

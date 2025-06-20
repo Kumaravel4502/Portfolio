@@ -1,30 +1,31 @@
-import AboutMeMain from "./components/aboutMeSection/AboutMeMain";
-import ContactMeMain from "./components/contactMeSection/ContactMeMain";
-import ExperienceMain from "./components/experienceSection/ExperienceMain";
-import FooterMain from "./components/footer/FooterMain";
-import HeroGradient from "./components/heroSection/HeroGradient";
-import HeroMain from "./components/heroSection/HeroMain";
-import NavbarMain from "./components/navbar/NavbarMain";
-import ProjectsMain from "./components/projectsSection/ProjectsMain";
-import SkillsMain from "./components/skillsSection/SkillsMain";
-import SubSkills from "./components/skillsSection/SubSkills";
 import { Toaster } from 'react-hot-toast';
-// import SubHeroMain from "./components/subHeroSection/SubHeroMain";
+import React, { Suspense, lazy } from 'react';
+import Loading from './components/Loading';
+
+const AboutMeMain = lazy(() => import('./components/aboutMeSection/AboutMeMain'));
+const ContactMeMain = lazy(() => import('./components/contactMeSection/ContactMeMain'));
+const FooterMain = lazy(() => import('./components/footer/FooterMain'));
+const HeroGradient = lazy(() => import('./components/heroSection/HeroGradient'));
+const HeroMain = lazy(() => import('./components/heroSection/HeroMain'));
+const NavbarMain = lazy(() => import('./components/navbar/NavbarMain'));
+const ProjectsMain = lazy(() => import('./components/projectsSection/ProjectsMain'));
+const SkillsMain = lazy(() => import('./components/skillsSection/SkillsMain'));
+const SubSkills = lazy(() => import('./components/skillsSection/SubSkills'));
 
 function App() {
   return (
     <main className="font-body text-light relative overflow-hidden">
-      <NavbarMain />
-      <HeroMain />
-      <HeroGradient />
-      {/* <SubHeroMain /> */}
-      <AboutMeMain />
-      <SkillsMain />
-      <SubSkills />
-      {/* <ExperienceMain /> */}
-      <ProjectsMain />
-      <ContactMeMain />
-      <FooterMain />
+      <Suspense fallback={<Loading />}>
+        <NavbarMain />
+        <HeroMain />
+        <HeroGradient />
+        <AboutMeMain />
+        <SkillsMain />
+        <SubSkills />
+        <ProjectsMain />
+        <ContactMeMain />
+        <FooterMain />
+      </Suspense>
 
       {/* Toast notification container */}
       <Toaster

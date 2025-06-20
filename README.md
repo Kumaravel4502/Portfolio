@@ -1,12 +1,38 @@
-# React + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a portfolio website built with React and Vite.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To get a local copy up and running, follow these simple steps.
 
-## Expanding the ESLint configuration
+### Prerequisites
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/your_username_/Project-Name.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Run the development server
+   ```sh
+    npm run dev
+   ```
+
+## Performance Optimizations
+
+This project has been optimized for performance by implementing the following techniques:
+
+- **Code Splitting:** The application is broken down into smaller chunks using `React.lazy()` and `Suspense`. This allows the application to load only the necessary code for the initial screen, reducing the initial load time.
+- **Lazy Loading Images:** Images are lazy-loaded using the `react-lazy-load-image-component`. This means that images are only loaded when they are about to enter the viewport, which further improves the initial load time.
+- **CDN for Images:** All project images are served from a CDN, which ensures fast and efficient delivery of assets.
+- **Unused Asset Identification:** Unused large image files have been identified in the `public/images` directory. These can be safely deleted to reduce the overall project size.

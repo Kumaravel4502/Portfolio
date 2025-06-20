@@ -1,14 +1,9 @@
 import ContactInfo from "./ContactInfo";
 import ContactSocial from "./ContactSocial";
-import { motion as Motion } from "framer-motion";
-import { fadeIn } from "../../framerMotion/variants";
 
 const ContactMeRight = () => {
   return (
-    <Motion.div
-      className="flex flex-col items-center justify-center gap-6 sm:gap-8 w-full md:w-2/5"
-      variants={fadeIn("left", 0.3)}
-    >
+    <div className="flex flex-col items-center justify-center gap-6 sm:gap-8 w-full">
       <div className="w-full max-w-[250px] mx-auto overflow-hidden rounded-lg bg-darkBlue/30 p-4 border border-primary/10">
         <img
           src="/images/email-image.png"
@@ -35,11 +30,11 @@ const ContactMeRight = () => {
         />
       </div>
 
-      <div className="flex flex-col items-center justify-center gap-12">
+      <div className="flex flex-col items-center justify-center gap-6">
         <ContactInfo />
         <ContactSocial />
       </div>
-    </Motion.div>
+    </div>
   );
 };
 
