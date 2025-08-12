@@ -1,28 +1,23 @@
-import { PiHexagonThin } from "react-icons/pi";
+import { motion as Motion } from "framer-motion";
+import { fadeIn } from "../../framerMotion/variants";
+import Image from "../Image";
 
 const HeroImage = () => {
   return (
-    <div className="relative self-end h-full w-full items-center justify-center">
-      <div className=" h-full w-full">
-        <img
-          src="../../public/images/me.png"
-          alt="Abdelrahman Qassem"
-          className="w-auto h-auto md:max-w-[570px] sm:max-w-[380px] absolute bottom-[0px] z-10 left-[50%] -translate-x-[50%]"
+    <Motion.div
+      variants={fadeIn("left", 0.2)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
+      className="h-full flex items-center justify-center w-full md:w-1/2"
+    >
+      <div className="w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[380px] md:h-[380px] lg:w-[420px] lg:h-[420px]">
+        <Image
+          src="https://ik.imagekit.io/11ie2ifrf/portfolio-hero-2.png"
+          alt="Hero Image"
         />
-        <div className="w-full h-full absolute  bottom-[-20%] -z-10 flex justify-center items-center rotate-90">
-          <PiHexagonThin className=" md:h-[90%] sm:h-[120%] min-h-[600px] w-auto text-orange opacity-70  animate-[spin_20s_linear_infinite] " />
-        </div>
-        <div className="w-full h-full absolute  bottom-[-20%] -z-10 flex justify-center items-center rotate-90">
-          <PiHexagonThin className=" md:h-[90%] sm:h-[120%] blur-lg min-h-[600px] w-auto text-orange opacity-70  animate-[spin_20s_linear_infinite] " />
-        </div>
-        <div className="w-full h-full absolute  bottom-[-20%] -z-10 flex justify-center items-center">
-          <PiHexagonThin className=" md:h-[90%] sm:h-[120%] min-h-[600px] w-auto text-cyan opacity-70  animate-[spin_20s_linear_infinite] " />
-        </div>
-        <div className="w-full h-full absolute  bottom-[-20%] -z-10 flex justify-center items-center">
-          <PiHexagonThin className=" md:h-[90%] sm:h-[120%] min-h-[600px] w-auto text-cyan opacity-70 blur-lg  animate-[spin_20s_linear_infinite] " />
-        </div>
       </div>
-    </div>
+    </Motion.div>
   );
 };
 

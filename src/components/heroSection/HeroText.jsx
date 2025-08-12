@@ -35,11 +35,11 @@ const HeroText = () => {
 
       <Motion.div
         variants={fadeIn("up", 0.8)}
-        className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-2 justify-center md:justify-start items-center"
+        className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-2 justify-center md:justify-start items-center max-w-sm mx-auto md:max-w-none md:mx-0"
       >
         <Motion.a
           href="#projects"
-          className="btn-primary flex items-center gap-2 text-sm sm:text-base w-full sm:w-auto justify-center"
+          className="btn-primary flex items-center gap-2 text-sm sm:text-base"
           {...hoverScale}
         >
           View My Work
@@ -58,9 +58,8 @@ const HeroText = () => {
         </Motion.a>
         <Motion.a
           href="#contact"
-          className=" btn-secondary text-sm sm:text-base w-full sm:w-auto text-center"
+          className="btn-secondary text-sm sm:text-base"
           {...hoverScale}
-      
         >
           Contact Me
         </Motion.a>

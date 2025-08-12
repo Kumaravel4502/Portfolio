@@ -2,8 +2,11 @@ import HeroText from "./HeroText";
 import HeroPic from "./HeroPic";
 import { motion as Motion } from "framer-motion";
 import { staggerContainer } from "../../framerMotion/variants";
+import useResponsive from "../../hooks/useResponsive";
 
 const HeroMain = () => {
+  const { isMobile } = useResponsive();
+
   return (
     <Motion.div
       variants={staggerContainer(0.2, 0.3)}
@@ -25,35 +28,39 @@ const HeroMain = () => {
         />
 
         {/* Gradient circles */}
-        <Motion.div
-          className="absolute top-[10%] left-[5%] w-[25vw] h-[25vw] rounded-full bg-primary/5 blur-[120px]"
-          animate={{
-            x: [0, 20, 0],
-            y: [0, -20, 0],
-            scale: [1, 1.1, 1],
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "easeInOut",
-            repeatType: "mirror"
-          }}
-        />
-        <Motion.div
-          className="absolute bottom-[5%] right-[10%] w-[35vw] h-[30vw] rounded-full bg-secondary/5 blur-[150px]"
-          animate={{
-            x: [0, -30, 0],
-            y: [0, 15, 0],
-            scale: [1, 1.2, 1],
-          }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            ease: "easeInOut",
-            repeatType: "mirror",
-            delay: 3
-          }}
-        />
+        {!isMobile && (
+          <>
+            <Motion.div
+              className="absolute top-[10%] left-[5%] w-[25vw] h-[25vw] rounded-full bg-primary/5 blur-[120px]"
+              animate={{
+                x: [0, 20, 0],
+                y: [0, -20, 0],
+                scale: [1, 1.1, 1],
+              }}
+              transition={{
+                duration: 15,
+                repeat: Infinity,
+                ease: "easeInOut",
+                repeatType: "mirror"
+              }}
+            />
+            <Motion.div
+              className="absolute bottom-[5%] right-[10%] w-[35vw] h-[30vw] rounded-full bg-secondary/5 blur-[150px]"
+              animate={{
+                x: [0, -30, 0],
+                y: [0, 15, 0],
+                scale: [1, 1.2, 1],
+              }}
+              transition={{
+                duration: 18,
+                repeat: Infinity,
+                ease: "easeInOut",
+                repeatType: "mirror",
+                delay: 3
+              }}
+            />
+          </>
+        )}
 
         {/* Subtle line element */}
         <Motion.div
@@ -69,40 +76,44 @@ const HeroMain = () => {
         />
 
         {/* Code bracket decorations */}
-        <Motion.div
-          className="absolute top-[20%] left-[2%] text-[120px] font-light opacity-[0.03] font-mono"
-          animate={{
-            y: [0, 10, 0],
-            opacity: [0.02, 0.04, 0.02]
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        >
-          {'{'}
-        </Motion.div>
-        <Motion.div
-          className="absolute bottom-[10%] right-[2%] text-[120px] font-light opacity-[0.03] font-mono"
-          animate={{
-            y: [0, -10, 0],
-            opacity: [0.02, 0.04, 0.02]
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2
-          }}
-        >
-          {'}'}
-        </Motion.div>
+        {!isMobile && (
+          <>
+            <Motion.div
+              className="absolute top-[20%] left-[2%] text-[120px] font-light opacity-[0.03] font-mono"
+              animate={{
+                y: [0, 10, 0],
+                opacity: [0.02, 0.04, 0.02]
+              }}
+              transition={{
+                duration: 10,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            >
+              {'{'}
+            </Motion.div>
+            <Motion.div
+              className="absolute bottom-[10%] right-[2%] text-[120px] font-light opacity-[0.03] font-mono"
+              animate={{
+                y: [0, -10, 0],
+                opacity: [0.02, 0.04, 0.02]
+              }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 2
+              }}
+            >
+              {'}'}
+            </Motion.div>
+          </>
+        )}
       </div>
 
       <div className="flex md:flex-row sm:flex-col max-w-[1200px] mx-auto justify-between items-center gap-12 relative z-10">
         <HeroText />
-        <HeroPic />
+        {isMobile ? <HeroPic /> : <HeroPic />}
       </div>
     </Motion.div>
   );
