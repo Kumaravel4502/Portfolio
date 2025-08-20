@@ -13,7 +13,7 @@ const HeroText = () => {
           variants={textReveal(0.3)}
           className="text-xs sm:text-sm md:text-base lg:text-lg font-medium tracking-wider text-lightGray"
         >
-          FRONTEND WEB DEVELOPER
+        MERN FULLSTACK DEVELOPER
         </Motion.h2>
       </Motion.div>
 
@@ -30,7 +30,7 @@ const HeroText = () => {
         variants={fadeIn("up", 0.6)}
         className="text-base sm:text-lg text-gray leading-relaxed max-w-xs sm:max-w-sm md:max-w-md lg:text-xl mx-auto md:mx-0"
       >
-        A passionate web developer crafting beautiful and functional digital experiences with modern technologies.
+        A passionate FullSack developer crafting beautiful and functional digital experiences with modern technologies.
       </Motion.p>
 
       <Motion.div

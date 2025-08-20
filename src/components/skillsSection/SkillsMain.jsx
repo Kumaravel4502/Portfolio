@@ -2,9 +2,10 @@ import SkillsText from "./SkillsText";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../../framerMotion/variants";
 import SingleSkill from "./SingleSkill";
-import { FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs } from "react-icons/fa";
+import { GrMysql } from "react-icons/gr";
 import { IoLogoJavascript } from "react-icons/io";
-import { SiRedux, SiMui } from "react-icons/si";
+import { SiRedux, SiMui, SiExpress, SiMongodb } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 
 const skills = [
@@ -43,8 +44,27 @@ const skills = [
     icon: SiMui,
     color: "#007FFF",
   },
+  {
+    skill: "Node.js",
+    icon: FaNodeJs,
+    color: "#68A063",
+  },
+  {
+    skill: "Express.js",
+    icon: SiExpress,
+    color: "#000000",
+  },
+  {
+    skill: "MongoDB",
+    icon: SiMongodb,
+    color: "#47A248",
+  },
+  {
+    skill: "SQL",
+    icon: GrMysql,
+    color: "#00758F",
+  },
 ];
-
 const SkillsMain = () => {
   return (
     <motion.div
@@ -64,10 +84,7 @@ const SkillsMain = () => {
           <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-12 px-4">
             {skills.map((item, index) => {
               return (
-                <motion.div
-                  key={index}
-                  variants={fadeIn("up", 0)}
-                >
+                <motion.div key={index} variants={fadeIn("up", 0)}>
                   <SingleSkill
                     text={item.skill}
                     imgSvg={<item.icon style={{ color: item.color }} />}
@@ -91,7 +108,7 @@ const SkillsMain = () => {
           duration: 20,
           repeat: Infinity,
           ease: "easeInOut",
-          repeatType: "mirror"
+          repeatType: "mirror",
         }}
       />
       <motion.div
@@ -106,21 +123,21 @@ const SkillsMain = () => {
           repeat: Infinity,
           ease: "easeInOut",
           repeatType: "mirror",
-          delay: 2
+          delay: 2,
         }}
       />
       <motion.div
         className="absolute top-[40%] right-[30%] w-[15vw] h-[15vw] rounded-full bg-primaryLight/5 blur-[80px] -z-10"
         animate={{
           scale: [1, 1.4, 1],
-          opacity: [0.3, 0.6, 0.3]
+          opacity: [0.3, 0.6, 0.3],
         }}
         transition={{
           duration: 10,
           repeat: Infinity,
           ease: "easeInOut",
           repeatType: "mirror",
-          delay: 5
+          delay: 5,
         }}
       />
     </motion.div>

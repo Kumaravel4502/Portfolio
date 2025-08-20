@@ -7,7 +7,8 @@ import { fadeIn, staggerContainer } from "../../framerMotion/variants";
 const projects = [
   {
     name: "Foodie",
-    description: "A responsive food delivery web application with modern UI components and smooth animations.",
+    description:
+      "A responsive food delivery web application with modern UI components and smooth animations.",
     tech: ["React", "Tailwind CSS"],
     year: "2025",
     align: "right",
@@ -16,7 +17,8 @@ const projects = [
   },
   {
     name: "Food Munch",
-    description: "Food Munch is best described as a responsive landing page for a fictional food delivery service.",
+    description:
+      "Food Munch is best described as a responsive landing page for a fictional food delivery service.",
     tech: ["HTML5", "CSS3", "Tailwind CSS"],
     year: "2024",
     align: "left",
@@ -25,7 +27,8 @@ const projects = [
   },
   {
     name: "CiniFlix",
-    description: "Movie streaming platform using HTML and CSS with a responsive layout.",
+    description:
+      "Movie streaming platform using HTML and CSS with a responsive layout.",
     tech: ["HTML5", "CSS3"],
     year: "2023",
     align: "right",
@@ -34,7 +37,8 @@ const projects = [
   },
   {
     name: "Incredible India",
-    description: "Tourism website showcasing India's cultural heritage with interactive gallery.",
+    description:
+      "Tourism website showcasing India's cultural heritage with interactive gallery.",
     tech: ["HTML5", "CSS3"],
     year: "2023",
     align: "left",
@@ -43,21 +47,35 @@ const projects = [
   },
   {
     name: "Edugen",
-    description: "Edugen is a modern online learning platform that delivers accessible, engaging, and practical education, aiming to bridge the gap between traditional and digital learning with easy-to-follow, up-to-date content.",
+    description:
+      "Edugen is a modern online learning platform that delivers accessible, engaging, and practical education, aiming to bridge the gap between traditional and digital learning with easy-to-follow, up-to-date content.",
     tech: ["React", "Tailwind CSS"],
     year: "2025",
     align: "right",
-    image: "https://ik.imagekit.io/ixthr16gh/Intern-Work/Screenshot%202025-05-19%20153813.png",
+    image:
+      "https://ik.imagekit.io/ixthr16gh/Intern-Work/Screenshot%202025-05-19%20153813.png",
     link: "https://eguden04.netlify.app/",
   },
   {
     name: "Cat and Bulb",
-    description: "Interactive Cat and Bulb animation using HTML, CSS, and JavaScript, featuring dynamic DOM interactions.",
+    description:
+      "Interactive Cat and Bulb animation using HTML, CSS, and JavaScript, featuring dynamic DOM interactions.",
     tech: ["HTML5", "CSS3", "JavaScript"],
     year: "2024",
     align: "left",
     image: "https://ik.imagekit.io/11ie2ifrf/Cat%20and%20Bulb.png",
     link: "https://kumaravel4502.github.io/Cat-and-Bulb/",
+  },
+  {
+    name: "Edutics Landing Page",
+    description:
+      "Edutics is a clean and modern online course landing page built to engage learners and showcase educational content effectively. ",
+    tech: ["React", "Tailwind CSS"],
+    year: "2025",
+    align: "right",
+    image:
+      "https://ik.imagekit.io/ixthr16gh/Intern-Work/Screenshot%202025-08-20%20153258.png",
+    link: "https://github.com/Kumaravel4502/Edutics",
   },
 ];
 
@@ -78,28 +96,26 @@ const ProjectsMain = () => {
           style={{
             backgroundImage: `linear-gradient(to right, rgba(59, 130, 246, 0.1) 1px, transparent 1px), 
                             linear-gradient(to bottom, rgba(59, 130, 246, 0.1) 1px, transparent 1px)`,
-            backgroundSize: '80px 80px'
+            backgroundSize: "80px 80px",
           }}
         />
         <Motion.div
           className="absolute top-[30%] left-[10%] w-[40vw] h-[30vw] rounded-full bg-primary/5 blur-[120px] -z-10"
           animate={{
             opacity: [0.3, 0.5, 0.3],
-            scale: [1, 1.2, 1]
+            scale: [1, 1.2, 1],
           }}
           transition={{
             duration: 10,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
         />
       </div>
 
       {/* Container */}
       <div className="container-width relative z-10">
-        <Motion.div
-          variants={fadeIn("down", 0.2)}
-        >
+        <Motion.div variants={fadeIn("down", 0.2)}>
           <ProjectsText />
         </Motion.div>
 
