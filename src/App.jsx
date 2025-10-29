@@ -1,6 +1,7 @@
 import { Toaster } from 'react-hot-toast';
 import React, { Suspense, lazy } from 'react';
 import Loading from './components/Loading';
+import AllExperiences from './components/experienceSection/AllExperiences';
 
 const AboutMeMain = lazy(() => import('./components/aboutMeSection/AboutMeMain'));
 const ContactMeMain = lazy(() => import('./components/contactMeSection/ContactMeMain'));

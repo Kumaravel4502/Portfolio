@@ -16,25 +16,16 @@ const experiences = [
     ],
   },
   {
-    job: "Course Instructor",
-    company: "Nucamp",
-    date: "2023 - Present",
+    job: "Full Stack Developer Intern",
+    company: "Revamp Academy",
+    date: "April 2025 - June 2025",
     responsibilities: [
-      "Explaining and facilitating web development concepts.",
-      "Help students with their assignments and grade them weekly.",
-      "Provide support for students through their learning journey.",
+      "Developed responsive web applications and backend APIs using the MERN stack including landing pages forms with validation, review systems, and leaderboard interfaces.",
+      "Collaborated with cross-functional teams to design and implement new features, ensuring seamless integration between front-end and back-end components.",
+      "Participated in code reviews and contributed to improving code quality and performance across the application.",
     ],
   },
-  {
-    job: "Course Instructor",
-    company: "Sprints",
-    date: "2024 - Present",
-    responsibilities: [
-      "Teaching JavaScript, React and TailwindCSS.",
-      "Participating in preparing course materials.",
-      "Helping students through their way in learning web development technologies.",
-    ],
-  },
+  
 ];
 
 const AllExperiences = () => {
