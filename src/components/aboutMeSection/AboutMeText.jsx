@@ -21,6 +21,7 @@ const AboutMeText = () => {
         Download CV
       </a>
     </div>
+    
   );
 };
 
