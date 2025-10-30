@@ -1,4 +1,5 @@
 // import { Link } from "react-scroll";
+import resumePdf from "../../assets/Kumaravel_FullStack_Developer_Resume.pdf";
 
 const AboutMeText = () => {
   return (
@@ -14,8 +15,8 @@ const AboutMeText = () => {
         landscape.
       </p>
       <a
-        download="Kumaravel_Fullstack_Developer_Resume.pdf"
-        href="../../assets/Kumaravel_FullStack_Developer_Resume.pdf"
+        download="Kumaravel_FullStack_Developer_Resume.pdf"
+        href={resumePdf}
         className="border border-orange rounded-full py-2 px-4 text-lg flex gap-2 items-center mt-10 hover:bg-orange transition-all duration-500 cursor-pointer text-white hover:text-cyan"
       >
         Download CV
