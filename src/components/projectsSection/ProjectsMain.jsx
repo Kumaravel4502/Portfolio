@@ -6,6 +6,16 @@ import { fadeIn, staggerContainer } from "../../framerMotion/variants";
 // Professional updated project list with more relevant information
 const projects = [
   {
+    name: "UN-STYLE",
+    description:
+      "A full-stack web application developed using MongoDB, Express.js, React and Node.js. It supports product listing, user sessions, shopping cart, and checkout functionality — delivering a smooth, responsive shopping experience from frontend to backend.",
+    tech: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
+    year: "2025",
+    align: "left",
+    image: "https://ik.imagekit.io/ixthr16gh/MERN/HeroImage.png",
+    // link: "https://foodiee-wheat.vercel.app/",
+  },
+  {
     name: "Foodie",
     description:
       "A responsive food delivery web application with modern UI components and smooth animations.",
