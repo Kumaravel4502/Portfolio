@@ -13,7 +13,7 @@ const projects = [
     year: "2025",
     align: "left",
     image: "https://ik.imagekit.io/ixthr16gh/MERN/HeroImage.png",
-    // link: "https://foodiee-wheat.vercel.app/",
+    link: "https://un-style-ecomm.onrender.com/",
   },
   {
     name: "Foodie",
@@ -59,7 +59,7 @@ const projects = [
     name: "Edugen",
     description:
       "Edugen is a modern online learning platform that delivers accessible, engaging, and practical education, aiming to bridge the gap between traditional and digital learning with easy-to-follow, up-to-date content.",
-    tech: ["React", "Tailwind CSS"],
+    tech: ["React", "Tailwind CSS","Node.js","Express.js"],
     year: "2025",
     align: "right",
     image:
@@ -80,13 +80,24 @@ const projects = [
     name: "Edutics Landing Page",
     description:
       "Edutics is a clean and modern online course landing page built to engage learners and showcase educational content effectively. ",
-    tech: ["React", "Tailwind CSS"],
+    tech: ["React", "Tailwind CSS","Node.js","Express.js"],
     year: "2025",
     align: "right",
     image:
       "https://ik.imagekit.io/ixthr16gh/Intern-Work/Screenshot%202025-08-20%20153258.png",
     link: "https://github.com/Kumaravel4502/Edutics",
   },
+  {
+    name: "Leaderboard UI Design",
+    description:
+      "A clean and interactive leaderboard interface showcasing player rankings with modern UI elements.",
+    tech: ["React", "Tailwind CSS","Node.js","Express.js"],
+    year: "2025",
+    align: "left",
+    image: "https://ik.imagekit.io/ixthr16gh/image.png",
+    link: "https://leaderboarduidesign.netlify.app/"
+  }
+  
 ];
 
 const ProjectsMain = () => {
