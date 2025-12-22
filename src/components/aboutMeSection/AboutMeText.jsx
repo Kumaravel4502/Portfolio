@@ -6,13 +6,12 @@ const AboutMeText = () => {
     <div className="flex flex-col md:items-start sm:items-center md:text-left sm:text-center">
       <h2 className="text-6xl text-cyan mb-10">About Me</h2>
       <p>
-        I’m Kumaravel, a Full-Stack Web Developer with expertise in React and
-        modern front-end technologies. I build real-world, scalable projects and
-        have hands-on experience working across the full stack with Node.js,
-        Express, and databases like MongoDB and MySQL. I’m passionate about
-        creating seamless user experiences, writing clean and maintainable code,
-        and continuously learning to stay ahead in the fast-evolving tech
-        landscape.
+        I’m Kumaravel, a Full-Stack Web Developer specializing in React-based
+        frontend development and scalable backend solutions. I have hands-on
+        experience building production-ready applications using Node.js,
+        Express, MongoDB, and MySQL. I enjoy solving real-world problems,
+        designing intuitive user experiences, and writing clean, efficient code
+        while continuously upskilling with modern web technologies.
       </p>
       <a
         download="Kumaravel_FullStack_Developer_Resume.pdf"
@@ -22,7 +21,6 @@ const AboutMeText = () => {
         Download CV
       </a>
     </div>
-
   );
 };
 
